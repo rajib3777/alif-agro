@@ -1,0 +1,37 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  color-scheme: dark;
+}
+
+html, body{
+  height:100%;
+}
+
+body{
+  @apply bg-bg text-mist antialiased;
+}
+
+.container-page{
+  @apply mx-auto w-full max-w-6xl px-4;
+}
+
+.glass{
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(10px);
+}
+
+.grain:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.12;
+  background-image: url('/2d/grain.svg');
+  background-size: 280px 280px;
+  mix-blend-mode: overlay;
+}
